@@ -1,10 +1,12 @@
 package user;
 
 import chat.Chat;
+import chat.ChatList;
+import chat.ChatService;
 
 public interface AdminServiceInterface {
-    void deleteAnyChat(Admin admin, Chat chat);
+    void deleteAnyChat(ChatService chatService, ChatList chatList, Admin admin, Chat chat);
     void changeChatMaxUsers(Admin admin, Chat chat, int maxUsers);
-    Admin crateAdmin(String nameAdmin);
-    void deleteAdmin(Admin admin);
+    Admin crateAdmin(UserList userList, String nameAdmin);
+    void deleteAdmin(UserList userList, Admin admin);
 }
